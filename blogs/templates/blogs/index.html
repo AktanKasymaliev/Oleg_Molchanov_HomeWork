@@ -10,8 +10,18 @@ Posts List
 <div class="mb-5">
     <h1>Posts:</h1>
 </div>
-{% for el in name %}
-<h4>HELLOOOOO {{el}}</h4>
+{% for el in posts %}
+        <div class="card mb-5">
+            <div class="card-header">
+                {{el.data_pub}}
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{ el.title }}</h5>
+                <p class="card-text">{{ el.body|truncatewords:10 }}</p>
+                <a href="{{ post.get_absolute_url }}" class="btn btn-primary">Read</a>
+            </div>
+        </div>
+
 {% endfor %}
 
 {% endblock %}
