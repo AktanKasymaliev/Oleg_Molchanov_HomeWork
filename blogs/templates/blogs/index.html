@@ -1,0 +1,17 @@
+{% extends 'blogs/base_blogs.html' %}
+
+{% block title %}
+Posts List
+{% endblock %}
+
+
+
+{% block content %}
+<div class="mb-5">
+    <h1>Posts:</h1>
+</div>
+{% for el in name %}
+<h4>HELLOOOOO {{el}}</h4>
+{% endfor %}
+
+{% endblock %}
